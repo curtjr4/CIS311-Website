@@ -6,11 +6,13 @@
 }
 all: initial;
 
+/* Styling for the header below */
 header {
 	width: 99%;
 	height: auto;
 	height: 100px;
 }
+/* Styling for the footer below */
 footer {
 	width: 99%;
 	height: auto;
@@ -26,6 +28,7 @@ aside { /*Used for sidebar with current projects*/
 	flex: 1;
 	width: auto;
 }
+/*Styling for main below */
 main {
 	margin: 1%;
 	width: 80%;
@@ -43,4 +46,17 @@ ul {
 }
 p {
 	display: block;
+}
+/* Styling for removing bullet points from nav below */
+nav li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Arial", sans-serif;
+}
+/* Remove underline from anchors/links */
+a {
+    text-decoration: none;
 }
