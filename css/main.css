@@ -1,0 +1,46 @@
+/* Curt Manning
+ * October 22nd 2023
+ * main.css
+ */
+/* Reset all CSS properties to their initial values. */
+}
+all: initial;
+
+header {
+	width: 99%;
+	height: auto;
+	height: 100px;
+}
+footer {
+	width: 99%;
+	height: auto;
+}
+section {
+	width: 99%;
+	display: -webkit-flex;
+	display: flex;
+}
+aside { /*Used for sidebar with current projects*/
+	-webkit-flex 1;
+	-ms-flex: 1;
+	flex: 1;
+	width: auto;
+}
+main {
+	margin: 1%;
+	width: 80%;
+}
+img {
+	max-width: 100%;
+	max-height: auto;
+	display: block;
+}
+h2 {
+	display: block;
+}
+ul {
+	display: block;
+}
+p {
+	display: block;
+}
