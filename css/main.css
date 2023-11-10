@@ -59,3 +59,24 @@ body {
 a {
     text-decoration: none;
 }
+
+@media only screen and (max-width: 1024px) {
+	.mobile-hide {
+		display: none;
+	}
+	.mobile-center {
+		display: block;
+		margin-bottom: 10px;
+		text-align: center;
+		margin: auto;
+	}
+	.mobile-header-img {
+		max-width: 50%;
+		max-height: 50%;
+		display: block;
+		margin: auto;
+	}
+	main {
+		width: 99%;
+	}
+}
