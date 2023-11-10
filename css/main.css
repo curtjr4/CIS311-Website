@@ -3,7 +3,6 @@
  * main.css
  */
 /* Reset all CSS properties to their initial values. */
-}
 all: initial;
 
 /* Styling for the header below */
@@ -23,7 +22,7 @@ section {
 	display: flex;
 }
 aside { /*Used for sidebar with current projects*/
-	-webkit-flex 1;
+	-webkit-flex: 1;
 	-ms-flex: 1;
 	flex: 1;
 	width: auto;
