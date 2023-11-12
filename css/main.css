@@ -1,5 +1,5 @@
 /* Curt Manning
- * October 22nd 2023
+ * November 12 2023
  * main.css
  */
 
@@ -7,93 +7,20 @@
  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 /* Reset all CSS properties to their initial values. */
-
-/* Styling for the header below
-header {
-	width: 99%;
-	height: auto;
-} /*
-/* Styling for the footer below */
-footer {
-	width: 99%;
-	height: auto;
-}
-section {
-	width: 99%;
-	display: -webkit-flex;
-	display: flex;
-}
-/*aside {
-	-webkit-flex: 1;
-	-ms-flex: 1;
-	flex: 1;
-	width: auto;
-} */
-/*Styling for main below */
-/*
-main {
-	margin: 1%;
-	width: 80%;
-}*/
-/*img {
-	max-width: 100%;
-	max-height: auto;
-	display: block;
-}*/
-/* Work on this to get my image to float in the left and NOT go over the nav bar. */
-/*.header-img {
-	float: left;
-	margin-right: 5%;
-	width: auto;
-	height: auto;
-	max-width: 10%;
-	border-radius: 25px;
-}*/
-h2 ul p {
-	display: block;
+footer a section h2 ul p nav ul li body main {
+	all:initial;
 }
 
-nav {
-    background-color: #252525;
-    color: white;
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-nav ul li {
-    display: inline-block;
-}
-
-nav ul li a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 15px 20px;
-    transition: background-color;
-}
-
-nav ul li a:hover {
-    background-color: #ddd; /* Light background on hover */
-    color: black; /* Text color change on hover */
-}
-
-body {
-    font-family: "Roboto", sans-serif;
-}
-/* Remove underline from anchors/links */
-a {
-    text-decoration: none;
-}
-
-@media only screen and (max-width: 1024px) {
-	.mobile-hide {
+/* The following is for smaller/mobile screens. */
+@media only screen and (max-width: 800px) {
+	.desktop-only {
 		display: none;
+	}
+	.tablet-only { 
+		display: none;
+	}
+	.mobile-only {
+		display: block;
 	}
 	.mobile-center {
 		display: block;
@@ -128,4 +55,138 @@ a {
 	.ulLeft {
 		text-align: left;
 	}
+}
+
+/* The following is for tablets. */
+@media only screen and (min-width: 801px) and (max-width: 1024px) {
+	.tablet-only { 
+		display: block;
+	}
+	.desktop-only {
+		display: none;
+	}
+	.mobile-only {
+		display: none;
+	}
+	.mobile-center {
+		text-align: inherit; /* Inherit the default for this as this isn't for mobile. */
+	}
+	a:hover {
+		color: #252525;
+	}
+	main h1 {
+		text-align: center;
+	}
+	/* To do: Make the header image float in the top left and NOT overlap other elements. */
+}
+
+/* The following is for desktops. */
+@media only screen and (min-width: 1025px) {
+	.desktop-only {
+		display: block;
+	}
+	.tablet-only {
+		display: none;
+	}
+	.mobile-only {
+		display: none;
+	}
+	.mobile-center {
+		text-align: inherit; /* Inherit the default for this as this isn't for mobile. */
+	}
+	/* Styling for the header below */
+	header {
+		width: 99%;
+		height: auto;
+	}
+	/*Styling for main below */
+	main {
+		margin: 1%;
+		width: 80%;
+	}
+	/* Image styling */
+	img {
+		max-width: 100%;
+		max-height: auto;
+		display: block;
+	}
+	/* Projects links will be black and red when hovered on. */
+	aside {
+		-webkit-flex: 1;
+		-ms-flex: 1;
+		flex: 1;
+		width: auto;
+	}
+	aside a {
+		color: black;
+	}
+	aside a:hover {
+		color: red;
+	}
+	/* To do: Make the header image float in the top left and NOT overlap other elements. */
+	/*.header-img {
+		float: left;
+		margin-right: 5%;
+		width: auto;
+		height: auto;
+		max-width: 10%;
+		border-radius: 25px;
+	}*/
+}
+
+/* "Global" styling below. Not specific to mobile/tablet/desktop. */
+
+/* Styling for the footer below */
+footer {
+	width: 99%;
+	height: auto;
+	background-color: #252525;
+    color: white;
+}
+footer a {
+	color: whitesmoke;
+}
+footer a:hover {
+	color: red;
+}
+section {
+	width: 99%;
+	display: -webkit-flex;
+	display: flex;
+}
+h2 ul p {
+	display: block;
+}
+nav {
+    background-color: #252525;
+    color: white;
+    text-align: center;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    transition: background-color;
+}
+nav ul li a:hover {
+    background-color: #ddd; /* Light background on hover */
+    color: black; /* Text color change on hover */
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+/* Remove underline from anchors/links */
+a {
+    text-decoration: none;
 }
