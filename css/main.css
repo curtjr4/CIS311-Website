@@ -7,8 +7,27 @@
  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 /* Reset all CSS properties to their initial values. */
-footer a section h2 ul p nav ul li body main {
+footer a section h2 ul p nav ul li body main .locationMap .contactMe {
 	all:initial;
+}
+
+/* Grid Layout */
+.item1 { grid-area: siteHeader; }
+.item2 { grid-area: siteHeaderPic; }
+.item3 { grid-area: siteProjects; }
+.item4 { grid-area: siteMain; }
+.item5 { grid-area: siteFooter; }
+.item6 { grid-area: siteNav; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'siteHeaderPic siteHeaderPic siteHeader siteHeader siteHeader siteHeader'
+	'siteNav siteNav siteNav siteNav siteNav'
+    'siteProjects siteMain siteMain siteMain siteMain siteMain'
+    'siteProjects siteFooter siteFooter siteFooter siteFooter siteFooter';
+  gap: 10px;
+  padding: 10px;
 }
 
 /* The following is for smaller/mobile screens. */
@@ -189,4 +208,7 @@ body {
 /* Remove underline from anchors/links */
 a {
     text-decoration: none;
+}
+.contactMe h5 {
+	margin-top: 0;
 }
