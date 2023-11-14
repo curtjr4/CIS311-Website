@@ -11,21 +11,15 @@ footer a section h2 ul p nav ul li body main .locationMap .contactMe {
 	all:initial;
 }
 
-/* Grid Layout */
-.item1 { grid-area: siteHeader; }
-.item2 { grid-area: siteHeaderPic; }
-.item3 { grid-area: siteProjects; }
-.item4 { grid-area: siteMain; }
-.item5 { grid-area: siteFooter; }
-.item6 { grid-area: siteNav; }
+/* Content Grid Layout */
+.gridHeader { grid-area: gHeader; }
+.gridContent { grid-area: gContent; }
 
 .grid-container {
   display: grid;
   grid-template-areas:
-    'siteHeaderPic siteHeaderPic siteHeader siteHeader siteHeader siteHeader'
-	'siteNav siteNav siteNav siteNav siteNav'
-    'siteProjects siteMain siteMain siteMain siteMain siteMain'
-    'siteProjects siteFooter siteFooter siteFooter siteFooter siteFooter';
+	'gHeader gHeader gHeader gHeader'
+	'gContent gContent gContent gContent';
   gap: 10px;
   padding: 10px;
 }
@@ -53,9 +47,16 @@ footer a section h2 ul p nav ul li body main .locationMap .contactMe {
 		margin: auto;
 		border-radius: 15px;
 	}
+	.headGridTitle h2 {
+		text-align: center;
+	}
+	.headGridPic {
+		text-align: center;
+	}
 	header {
 		width: 100%;
 		height: auto;
+		text-align: center;
 	}
 	main {
 		width: 100%;
@@ -90,13 +91,50 @@ footer a section h2 ul p nav ul li body main .locationMap .contactMe {
 	.mobile-center {
 		text-align: inherit; /* Inherit the default for this as this isn't for mobile. */
 	}
+	.headGridTitle h2 {
+		text-align: center;
+	}
+	.headGridPic {
+		text-align: center;
+	}
 	a:hover {
 		color: #252525;
 	}
 	main h1 {
 		text-align: center;
 	}
-	/* To do: Make the header image float in the top left and NOT overlap other elements. */
+	.headGridPic { grid-area: headPic;}
+	.headGridTitle { grid-area: headTitle; }
+	.headGridTagline { grid-area: headGridTagline; }
+	.head-grid-container {
+		display: grid;
+		grid-template-areas:
+		'headPic'
+		'headTitle';
+
+	}
+
+	.head-grid-container div {
+		overflow: hidden;
+	}
+	.headGridPic figure {
+		margin-bottom: 0;
+	}
+	.headGridPic figure figcaption {
+		display: none;
+	}
+
+	.header-img {
+		height: auto;
+		max-width: 35%;
+		border-bottom: 0;
+		border-radius: 25px;
+	}
+	.headGridTitle .tablet-only p {
+		text-align: center;
+		margin-top: 0;
+	}
+
 }
 
 /* The following is for desktops. */
@@ -112,6 +150,28 @@ footer a section h2 ul p nav ul li body main .locationMap .contactMe {
 	}
 	.mobile-center {
 		text-align: inherit; /* Inherit the default for this as this isn't for mobile. */
+	}
+	.grid-image {
+		max-width: auto;
+		max-height: auto;
+	}
+
+	/* Header Grid Layout */
+	.headGridPic { grid-area: headPic;}
+	.headGridTitle { grid-area: headTitle; }
+	.headGridTagline { grid-area: headGridTagline; }
+	.head-grid-container {
+		display: grid;
+		grid-template-areas:
+		'headPic headTitle headTitle headTitle headTitle headTitle';
+		grid-template-columns: auto 55%;
+		grid-template-rows: auto;
+	}
+	.headGridPic figcaption {
+		display: none;
+	}
+	.headGridTitle h2 {
+		text-align: left;
 	}
 	/* Styling for the header below */
 	header {
@@ -142,15 +202,12 @@ footer a section h2 ul p nav ul li body main .locationMap .contactMe {
 	aside a:hover {
 		color: red;
 	}
-	/* To do: Make the header image float in the top left and NOT overlap other elements. */
-	/*.header-img {
-		float: left;
+	.header-img {
 		margin-right: 5%;
-		width: auto;
 		height: auto;
-		max-width: 10%;
+		max-width: 15%;
 		border-radius: 25px;
-	}*/
+	}
 }
 
 /* "Global" styling below. Not specific to mobile/tablet/desktop. */
