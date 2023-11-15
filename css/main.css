@@ -1,6 +1,6 @@
 /* Curt Manning
- * November 12 2023
  * main.css
+ * November 14 2023
  */
 
  /* Import Google Fonts */
@@ -52,6 +52,9 @@ footer a section h2 ul p nav ul li body main .locationMap .contactMe {
 	}
 	.headGridPic {
 		text-align: center;
+	}
+	.headGridPic figcaption {
+		padding-top: 5%;
 	}
 	header {
 		width: 100%;
@@ -191,6 +194,7 @@ footer a section h2 ul p nav ul li body main .locationMap .contactMe {
 	}
 	.headGridTitle h2 {
 		font-size: 3.2vw;
+		text-shadow: 2px 2px #757575;
 	}
 	/*Styling for main below */
 	main {
@@ -274,6 +278,11 @@ body {
 a {
     text-decoration: none;
 }
-.contactMe h5 {
+.contactMe {
 	margin-top: 0;
+}
+.mobile-center .locationMap {
+	display: block;
+	text-align: center;
+	margin: auto;
 }
