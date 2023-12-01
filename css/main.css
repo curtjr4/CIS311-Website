@@ -74,6 +74,37 @@ footer a section h2 ul p nav ul li body main .locationMap .contactMe {
         display: block; /* Stack items vertically on small screens */
         width: 100%;
     }
+	nav.is-active {
+		display: block;
+		height: auto;
+		opacity: 1;
+		transition: opacity 0.5s ease-in-out;
+	  }
+	nav {
+		display: block;
+		height: 0;
+		opacity: 0;
+		transition: opacity 0.5s ease-in-out;
+	}
+	nav.show {
+		display: block;
+	}
+	.hamburger-menu {
+        display: block;
+        cursor: pointer;
+		background-color: #252525;
+		border: none;
+		width: 100%;
+    }
+    .hamburger-menu img {
+        width: 30px;
+        height: auto;
+		filter: invert(1);
+		transition: transform 0.5s ease-in-out;
+    }
+	.hamburger-menu.rotate img {
+		transform: rotate(360deg);
+	}
 	.noBullets {
 		list-style-type: none;
 		padding: 0;
