@@ -382,3 +382,10 @@ a {
 	text-align: center;
 	margin: auto;
 }
+.linked-in-bug {
+	display: inline-block;
+	margin: none;
+	width: auto;
+	height: 21px; /* 21px is the minimum permitted as stated by LinkedIn at https://brand.linkedin.com/downloads */
+	white-space: nowrap;
+}
